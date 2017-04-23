@@ -9,7 +9,6 @@ import os
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-install_requires = ['distribute']
 if sys.hexversion < 0x2070000:
     install_requires += ['argparse']
 setup(name='pyter',
@@ -22,7 +21,6 @@ setup(name='pyter',
       platforms = "any",
       packages=['pyter'],
       entry_points=dict(console_scripts=['pyter=pyter:main']),
-      install_requires=install_requires,
       classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
